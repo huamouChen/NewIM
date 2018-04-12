@@ -62,6 +62,7 @@ class SplashActivity : Activity() {
     private fun gotoGuideActivity() {
         val intent = Intent(this, GuideActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     /*
@@ -70,6 +71,7 @@ class SplashActivity : Activity() {
     private fun gotoMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:listDivider">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/chm_text_color_primary</item>
+        <item name="android:textColorSecondary">@color/chm_text_color_secondary</item>
+        <item name="android:textColorTertiary">@color/chm_text_color_tertiary</item>
+        <item name="android:textColorPrimaryInverse">@color/chm_text_color_primary_inverse</item>
+        <item name="android:textColorSecondaryInverse">@color/chm_text_color_secondary_inverse
+        </item>
+        <item name="android:textColorTertiaryInverse">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:indeterminateDrawable">@drawable/chm_progress_round</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/loading</item>
+    </style>
+
+    <style name="GuideTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/loading</item>
+    </style>
+</resources>

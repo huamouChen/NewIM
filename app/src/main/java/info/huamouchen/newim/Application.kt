@@ -2,6 +2,7 @@ package info.huamouchen.newim
 
 import android.app.Application
 import android.content.Context
+import android.support.multidex.MultiDex
 import io.rong.imlib.RongIMClient
 
 /**
@@ -14,6 +15,11 @@ class Application : Application() {
         super.onCreate()
 
         initRongCloud()
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 
 
