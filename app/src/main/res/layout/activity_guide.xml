@@ -22,7 +22,7 @@
 
             android:background="@drawable/rs_select_btn_white"
             android:text="@string/guide_login"
-            android:textColor="@color/text_main"
+            android:textColor="@color/chm_text_color_primary"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="40dp"

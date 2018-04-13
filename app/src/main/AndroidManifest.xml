@@ -4,7 +4,12 @@
     package="info.huamouchen.newim">
 
     <!--用户权限-->
+    <!--访问网络权限-->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 查看 Wi-Fi 状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 查看网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".Application"
