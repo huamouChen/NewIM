@@ -18,5 +18,6 @@ class Constants {
 
     // 融云的token
     val Rong_Token = "Rong_Token"
+    val Test_Token = "QpTC8kDR4IBKsFp3OahFg6ystTn6XbcCI/ljX3r2W8JqWA2FsCcUH24sK0QHmXaS7/HekgzkDgdE3ZPDuIQPFw=="
 
 }

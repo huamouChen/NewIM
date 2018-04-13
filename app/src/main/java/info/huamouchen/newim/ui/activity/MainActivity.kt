@@ -18,7 +18,8 @@ import info.huamouchen.newim.ui.fragment.ConversationListFragment
 import info.huamouchen.newim.ui.fragment.DiscoverFragment
 import info.huamouchen.newim.ui.fragment.MineFragment
 import info.huamouchen.newim.ui.widget.DragPointView
-import java.util.*
+import io.rong.imlib.RongIMClient
+
 
 /**
  * Created by Rex on 2018/4/12.
@@ -30,6 +31,7 @@ class MainActivity : FragmentActivity(), View.OnClickListener, ViewPager.OnPageC
     * viewPager 滑动状态改变监听
     * */
     override fun onPageScrollStateChanged(state: Int) {}
+
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
     override fun onPageSelected(position: Int) {
         changeTextViewColor()
@@ -86,6 +88,28 @@ class MainActivity : FragmentActivity(), View.OnClickListener, ViewPager.OnPageC
         mRedImg = findViewById(R.id.mine_red)
         mMoreImg = findViewById(R.id.seal_more)
         mSearchImg = findViewById(R.id.ac_iv_search)
+
+        initData()
+    }
+
+    /*
+    * 初始化数据
+    * */
+    private fun initData() {
+        // 连接融云服务器
+        RongIMClient.connect(Constants().Test_Token, object : RongIMClient.ConnectCallback() {
+            override fun onTokenIncorrect() {
+                println("-------------------onTokenIncorrect")
+            }
+
+            override fun onSuccess(p0: String?) {
+                println("-------------------onSuccess")
+            }
+
+            override fun onError(p0: RongIMClient.ErrorCode?) {
+                println("-------------------onError")
+            }
+        })
     }
 
     /*
@@ -168,19 +192,19 @@ class MainActivity : FragmentActivity(), View.OnClickListener, ViewPager.OnPageC
     lateinit var mContext: Context
     var isDebug = false
 
-     var mViewPager: ViewPager? = null
-     var mChatsImg: ImageView? = null
-     var mContactsImg: ImageView? = null
-     var mDiscoverImg: ImageView? = null
-     var mMineImg: ImageView? = null
-     var mMoreImg: ImageView? = null       // 加号Img
-     var mRedImg: ImageView? = null        // 我的红点
+    var mViewPager: ViewPager? = null
+    var mChatsImg: ImageView? = null
+    var mContactsImg: ImageView? = null
+    var mDiscoverImg: ImageView? = null
+    var mMineImg: ImageView? = null
+    var mMoreImg: ImageView? = null       // 加号Img
+    var mRedImg: ImageView? = null        // 我的红点
 
-     var mChatsText: TextView? = null
-     var mContatsText: TextView? = null
-     var mDiscoverText: TextView? = null
-     var mMineText: TextView? = null
-     var mSearchImg: ImageView? = null         // 搜索image
-     var mUnreadNumView: DragPointView? = null // 未读消息红点
+    var mChatsText: TextView? = null
+    var mContatsText: TextView? = null
+    var mDiscoverText: TextView? = null
+    var mMineText: TextView? = null
+    var mSearchImg: ImageView? = null         // 搜索image
+    var mUnreadNumView: DragPointView? = null // 未读消息红点
 
 }

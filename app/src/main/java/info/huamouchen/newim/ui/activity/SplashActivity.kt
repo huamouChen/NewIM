@@ -6,9 +6,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.Window
+import info.huamouchen.newim.AppContext
 import info.huamouchen.newim.Constants
 import info.huamouchen.newim.R
 import io.rong.imlib.RongIMClient
+
 
 /**
  * Created by Rex on 2018/4/11.
@@ -45,8 +47,7 @@ class SplashActivity : Activity() {
                 }
             }, delayMillis)
         } else {    // token 不为空，进入的时候，要连接融云的服务器
-            // TODO("如果登录了，进入主界面的时候应该要连接融云的服务器，这里还没有连接")
-            RongIMClient.connect(rong_token, null)
+            RongIMClient.connect(Constants().Test_Token, AppContext.RongConnectCallback())
             mHandler.postDelayed({
                 kotlin.run {
                     gotoMainActivity()

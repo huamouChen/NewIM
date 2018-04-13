@@ -1,15 +1,14 @@
 package info.huamouchen.newim
 
-import android.app.Application
-import android.content.Context
-import android.support.multidex.MultiDex
+import android.support.multidex.MultiDexApplication
 import io.rong.imlib.RongIMClient
+
 
 /**
  * Created by Rex on 2018/4/11.
  * Email chenhm4444@gmail.com
  */
-class Application : Application() {
+class Application : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
@@ -17,16 +16,16 @@ class Application : Application() {
         initRongCloud()
     }
 
-    override fun attachBaseContext(base: Context?) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
-    }
+//    override fun attachBaseContext(base: Context?) {
+//        super.attachBaseContext(base)
+//        MultiDex.install(this)
+//    }
 
 
     /*
     * 初始化融云SDK
     * */
     fun initRongCloud() {
-        RongIMClient.init(applicationContext)
+        RongIMClient.init(this)
     }
 }
