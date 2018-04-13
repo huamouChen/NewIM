@@ -3,4 +3,10 @@
 
     <string name="guide_login">登录</string>
     <string name="guide_register">注册</string>
+
+    <!--tab-->
+    <string name="chat">会话</string>
+    <string name="contacts">通讯录</string>
+    <string name="discover">发现</string>
+    <string name="me">我</string>
 </resources>

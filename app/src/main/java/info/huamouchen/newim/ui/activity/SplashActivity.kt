@@ -36,7 +36,7 @@ class SplashActivity : Activity() {
     private fun switchRootActivity() {
         // 从本地取 token，如果token不为空就是登陆过了，然后进入MainActivity，否则进入GuideActivity
         val sp = getSharedPreferences(Constant().SharedPreferencesName, Context.MODE_PRIVATE)
-        sp.edit().putString(Constant().Rong_Token, "").apply()
+        sp.edit().putString(Constant().Rong_Token, "123").apply()
         val rong_token = sp.getString(Constant().Rong_Token, "")
         if (rong_token.isEmpty()) { // token 为空
             mHandler.postDelayed({

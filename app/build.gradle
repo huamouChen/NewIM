@@ -9,9 +9,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
-//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -27,8 +27,7 @@ android {
     sourceSets {
         main {
             jni.srcDirs = []
-//            jniLibs.srcDirs = ['libs']
-            jniLibs.srcDirs = ['src/main/libs']
+            jniLibs.srcDirs = ['libs']
         }
     }
 }
@@ -46,10 +45,7 @@ dependencies {
 
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:multidex:1.0.3'
-    implementation(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
 }
 repositories {
     mavenCentral()
-    flatDir { dirs 'aars' }
-
 }
