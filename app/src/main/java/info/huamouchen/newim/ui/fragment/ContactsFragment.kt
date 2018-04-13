@@ -15,7 +15,7 @@ import info.huamouchen.newim.R
 class ContactsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val contentView : View = inflater.inflate(R.layout.fragment_contacts, container)
+        val contentView : View = inflater.inflate(R.layout.fragment_contacts, container, false)
         return contentView
     }
 }

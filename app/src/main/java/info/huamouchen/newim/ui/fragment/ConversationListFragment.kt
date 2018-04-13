@@ -15,7 +15,7 @@ import info.huamouchen.newim.R
 class ConversationListFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val contentView : View = inflater.inflate(R.layout.fragment_conversation_list, container)
+        val contentView : View = inflater.inflate(R.layout.fragment_conversation_list, container, false)
         return contentView
     }
 }

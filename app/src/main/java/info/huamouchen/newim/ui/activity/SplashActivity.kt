@@ -6,7 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.Window
-import info.huamouchen.newim.Constant
+import info.huamouchen.newim.Constants
 import info.huamouchen.newim.R
 import io.rong.imlib.RongIMClient
 
@@ -35,9 +35,9 @@ class SplashActivity : Activity() {
     * */
     private fun switchRootActivity() {
         // 从本地取 token，如果token不为空就是登陆过了，然后进入MainActivity，否则进入GuideActivity
-        val sp = getSharedPreferences(Constant().SharedPreferencesName, Context.MODE_PRIVATE)
-        sp.edit().putString(Constant().Rong_Token, "123").apply()
-        val rong_token = sp.getString(Constant().Rong_Token, "")
+        val sp = getSharedPreferences(Constants().SharedPreferencesName, Context.MODE_PRIVATE)
+        sp.edit().putString(Constants().Rong_Token, "123").apply()
+        val rong_token = sp.getString(Constants().Rong_Token, "")
         if (rong_token.isEmpty()) { // token 为空
             mHandler.postDelayed({
                 kotlin.run {

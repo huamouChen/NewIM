@@ -15,7 +15,7 @@ import info.huamouchen.newim.R
 class DiscoverFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val contentView : View = inflater.inflate(R.layout.fragment_discover, container)
+        val contentView : View = inflater.inflate(R.layout.fragment_discover, container, false)
         return contentView
     }
 }
