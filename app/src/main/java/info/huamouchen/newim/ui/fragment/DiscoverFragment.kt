@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import info.huamouchen.newim.R
 
 /**
- * Created by Rex on 2018/4/11.
+ * Created by Rex on 2018/4/13.
  * Email chenhm4444@gmail.com
+ * 发现fragment，这个fragment的功能还没确定，暂时叫发现fragment
  */
-class MineFragment : Fragment() {
+class DiscoverFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val contentView : View = inflater.inflate(R.layout.fragment_mine, container)
+        val contentView : View = inflater.inflate(R.layout.fragment_discover, container)
         return contentView
     }
 }

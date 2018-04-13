@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import info.huamouchen.newim.R
 
 /**
- * Created by Rex on 2018/4/11.
+ * Created by Rex on 2018/4/13.
  * Email chenhm4444@gmail.com
+ * 联系人列表fragment
  */
-class MineFragment : Fragment() {
+class ContactsFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val contentView : View = inflater.inflate(R.layout.fragment_mine, container)
+        val contentView : View = inflater.inflate(R.layout.fragment_contacts, container)
         return contentView
     }
 }
