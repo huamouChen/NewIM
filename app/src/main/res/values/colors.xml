@@ -9,6 +9,9 @@
 
     <color name="tab_item_normal">#abadbb</color>
     <color name="tab_item_selected">#0099ff</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+    <color name="separator_bg">#dfdfdd</color>
 
 
 
